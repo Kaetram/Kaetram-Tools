@@ -1,0 +1,45 @@
+{
+  "name": "kaetram-tools",
+  "version": "1.0.0",
+  "packageManager": "yarn@4.0.0-rc.40",
+  "author": "Veradictus",
+  "description": "Kaetram development tools used for debugging, testing, and building Kaetram more efficiently.",
+  "homepage": "https://kaetram.com/",
+  "license": "MPL-2.0",
+  "scripts": {
+    "dev": "tsx watch --preserve-symlinks ./src/main.ts",
+    "lint:script": "eslint src/*.ts --ignore-path .gitignore",
+    "lint:fix": "yarn lint:script --fix"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@types/node": "^18.15.5",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-order-aesthetic": "^1.0.5",
+    "eslint-plugin-prefer-let": "^3.0.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "stylelint": "^14.16.1",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": "^16.10.0 || ^18.0.0 || ^19.0.0"
+  },
+  "repository": "git+https://github.com/Kaetram/Kaetram-Tools.git",
+  "dependencies": {
+    "@nodegui/nodegui": "^0.59.2",
+    "tslib": "^2.5.0",
+    "tsx": "^3.12.7"
+  }
+}
